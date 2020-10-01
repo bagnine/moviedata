@@ -40,25 +40,25 @@ Next, we seperated our movies by the categories from our hypotheses and analyzed
 We calculated correlations between out four metrics and ROI and used a series of data visualizations to describe the data.
 
 ### Hypothesis 1- There is an optimal season to release movies.
-![ROI by Month](/images/roi_by_month.png)
+![ROI by Month](./images/roi_by_month.png)
 Our first hypothesis proved solid. Our data yeilded a group of four months with higher profits than the rest, which occur at three month increments, allowing a movie studio to release new titles throughout the year while maximizing profit through smart timing. 
 
 ### Hypothesis 2- Some genres are more profitable in the box office than others
-![ROI by Genre](/images/ROI_genre.png)
+![ROI by Genre](./images/ROI_genre.png)
 Again, our hypothesis proved solid. Horror far out performed all other genres, while Thriller and Romance movies both showed solid average returns.
 
 ### Hypothesis 3- Budget is a predictor of profit
-![ROI by Budget](/images/ROI_budget_fulldata.png)
+![ROI by Budget](./images/ROI_budget_fulldata.png)
 This time our hypothesis was not vindicated by the initial inspection of the data. We can see from our initial analysis a negative trend as budgets increase. Because our dataset had so many outliers, we chose to dig a bit deeper and see what profitability looked like inside a narrower window.
 
-![Budget outliers](/images/budget_outliers.png)
+![Budget outliers](./images/budget_outliers.png)
 By removing outlying data, then narrowing our data to the central 70%, we see the trend line flatten and then move toward positive, signalling a window of more likely profit. While this still doesn't look like a strong indicator, it does give us some parameters to guide movie budgets in order to improve the likelihood of higher profit.
 
 ### Hypothesis 4- Ratings are a predictor of profit
-![ROI vs Ratings](/images/ROI_vs_rating.png)
+![ROI vs Ratings](./images/ROI_vs_rating.png)
 This hypothesis proved to be the least predictive of profit. Because ratings were such a poor measure of a movie's box office success, we chose not to fully explore ratings across our other factors, though we did compare with genre.
 
-![Ratings by Genre](/images/genre_ratings.png)
+![Ratings by Genre](./images/genre_ratings.png)
 Our most profitable genre, Horror, also had the lowest average ratings. While we thing quality and ratings are important to making and promoting movies, they are clearly not an important predictor of profit.
 
 ## Conclusion
