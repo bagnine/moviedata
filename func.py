@@ -9,7 +9,7 @@ def money_to_int(column):
     a = column.astype(str)
     b = a.str.replace('$', '')
     c = b.str.replace(',', '')
-    return c.astype(int)
+    return c.astype(float)
 
 def col_datetime(column):
     a = pd.to_datetime(column)
