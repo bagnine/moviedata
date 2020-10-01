@@ -81,6 +81,18 @@ These further questions would better inform the longterm benefits of producing h
 
 ## Links to notebook and presentation slides
 
+[Our Notebook](https://github.com/bagnine/moviedata/blob/master/Code/moviedata.ipynb)
+[Data cleaning functions](https://github.com/bagnine/moviedata/blob/master/Code/func.py)
+Presentation Slides (link)
 
+## Repository structure
 
-## Repo structure
+```
+├── README.md                           <- The top-level README for reviewers of this project
+├── DS_Project_Presentation.pdf         <- PDF version of project presentation
+├── code
+│   ├── moviedata.ipynb                 <- Our notebook
+│   ├── func.py                         <- .py functions for data cleaning
+├── data                                <- Both provided and web scraped
+└── images                              <- Visualizations used in README
+```
