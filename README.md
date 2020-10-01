@@ -1,93 +1,69 @@
-# Phase 1 Project
+# Movie Data Analysis for Profitability
 
-## Introduction
+**Authors**: David Shin, Nick Subic
 
-In this lesson, we review the guidelines for the Phase 1 Project.
+## Overview
 
-## Objectives
+For this project, we've been prompted to gather and analyze data about the movie industry in order to find insights on what makes a movie studio successful.
 
-You will be able to:
+## The Studio
 
-* Start your Phase 1 Project
-* Check that your project meets the requirements
-* Submit your project materials in Canvas
-* Prepare for your project review
+Microsoft has decided to join other tech giants like Apple and Amazon by creating its own movie studio. Because it will be creating a new brand, Microsoft wants to produce market research to describe the making of a successful movie and translate that into a series of guidelines for reproducing that success.
 
-## Project Overview
+## Data
 
-You've made it all the way through the first phase of this course - take a minute to celebrate your awesomeness!
+For this project we were provided 4 datasets and we created a 5th using the internet-
+* Box Office Mojo- This set includes both foreign and domestic gross sales but lacks any budget info. We largely passed over this set.
+* IMDb- This massive database includes release information, titles, ratings and a wide variety of data about cast, crew and director. 
+* Rotten Tomatoes- This set includes information about ratings, genre, and some box office numbers. Because it's notably lacking in titles, we were only able to gather correlary data and not join with the other databases.
+* The Numbers- This set includes budgets plus foreign and domestic gross for a large number of movies. Because our company is motivated by profit, this set proved instrumental in calculating investment returns.
+* Rotten Tomatoes (web scraped)- Because the provided RT data lacked titles and the ratings weren't normalized, we decided to pull the 'Freshness' percentage ratings directly from the website.
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project-campus/master/awesome.gif)
+## Our Hypotheses
 
-All that remains in Phase 1 is to put our newfound data science skills to use with a large project! This project will take an entire week to complete.
+There is an optimum season to release movies, and we can break that down to month.
 
-### Business Problem
+Some genres of movies are inherently more profitable than others. We can find out which, and use our findings to recommend content creation.
 
-Microsoft sees all the big companies creating original video content, and they want to get in on the fun. They have decided to create a new movie studio, but the problem is they don’t know anything about creating movies. They have hired you to help them better understand the movie industry.
-Your team is charged with exploring what type of films are currently doing the best at the box office. You must then translate those findings into actionable insights that the head of Microsoft's new movie studio can use to help decide what type of films to create.
+Budget is a predictor of which movies are most profitable. We can isolate a production budget window that is more likely to produce a good return.
 
-### The Data
+Ratings are a driver for reviews, attention, press and word of mouth. We believe we can find a correlation between ratings and profitability, and if so, use that correlation to further explore the factors of a highly rated film using our other metrics.
 
-In the folder `zippedData` are movie datasets from:
+## Methods
 
-* Box Office Mojo
-* IMDB
-* Rotten Tomatoes
-* TheMovieDB.org
+We believe the biggest determining factor in the success of a movie studio is profit. We used the difference between International Gross and budget and calculated it as a percentage of profit, or ROI. 
 
-It is up to you to decide what data from this to use and how to use it. If you want to make this more challenging, you can scrape websites or make API calls to get additional data. If you are feeling overwhelmed or behind (e.g. struggled with the Phase 1 Code Challenge), we recommend you use only the following data files:
+Next, we seperated our movies by the categories from our hypotheses and analyzed the data for patterns or trends. By reducing our sample size to recent movies that are relevant to our questions and aggregating our data, we were able to plot data from each of the four categories.
 
-* imdb.title.basics
-* imdb.title.ratings
-* bom.movie_gross
+## Results
 
-## Deliverables
+We calculated correlations between out four metrics and ROI and used a series of data visualizations to describe the data.
 
-There are three deliverables for this project:
+### Hypothesis 1- There is an optimal season to release movies.
+![ROI by Month](/images/roi_by_month.png)
+Our first hypothesis proved solid. Our data yeilded a group of four months with higher profits than the rest, which occur at three month increments, allowing a movie studio to release new titles throughout the year while maximizing profit through smart timing. 
 
-1. A **GitHub repository**
-2. A **Jupyter Notebook**
-3. A **non-technical presentation**
+### Hypothesis 2- Some genres are more profitable in the box office than others
+![ROI by Genre](/images/ROI_genre.png)
+Again, our hypothesis proved solid. Horror far out performed all other genres, while Thriller and Romance movies both showed solid average returns.
 
-Keep in mind that the audience for these deliverables is not only your teacher, but also potential employers. Employers will look at your project deliverables to evaluate multiple skills, including coding, modeling, communication, and domain knowledge. You will want to polish these as much as you can, both during the course and afterwards.
+### Hypothesis 3- Budget is a predictor of profit
+![ROI by Budget](/images/ROI_budget_fulldata.png)
+This time our hypothesis was not vindicated by the initial inspection of the data. We can see from our initial analysis a negative trend as budgets increase. Because our dataset had so many outliers, we chose to dig a bit deeper and see what profitability looked like inside a narrower window.
 
-We provide a few resources to help you understand what makes for good deliverables.
-- The rubric associated with this assignment
-- [A template for you to use, with an example for reference][].
+![Budget outliers](/images/budget_outliers.png)
+By removing outlying data, then narrowing our data to the central 70%, we see the trend line flatten and then move toward positive, signalling a window of more likely profit. While this still doesn't look like a strong indicator, it does give us some parameters to guide movie budgets in order to improve the likelihood of higher profit.
 
-### GitHub Repository
+### Hypothesis 4- Ratings are a predictor of profit
+![ROI vs Ratings](/images/ROI_vs_rating.png)
+This hypothesis proved to be the least predictive of profit. Because ratings were such a poor measure of a movie's box office success, we chose not to fully explore ratings across our other factors, though we did compare with genre.
 
-Your GitHub repository is the public-facing version of your project that your instructors and potential employers will see - make it as accessible as you can. At a minimum, it should contain all your project files and a README.md file that summarizes your project and helps visitors navigate the repository.
+![Ratings by Genre](/images/genre_ratings.png)
+Our most profitable genre, Horror, also had the lowest average ratings. While we thing quality and ratings are important to making and promoting movies, they are clearly not an important predictor of profit.
 
-### Jupyter Notebook
+## Conclusion
 
-Your Jupyter Notebook is the primary source of information about your analysis. At a minimum, it should contain or import all of the code used in your project and walk the reader through your project from start to finish. You may choose to use multiple Jupyter Notebooks in your project, but you should have one that provides a full project overview as a point of entry for visitors.
 
-### Non-Technical Presentation
+## Links to notebook and presentation slides
 
-Your non-technical presentation is your opportunity to communicate clearly and concisely about your project and it's real-world relevance. The target audience should be people with limited technical knowledge who may be interested in leveraging your project. For Phase 1, these would be Microsoft executives interested in making decisions about movie development. We recommend using Google Slides, PowerPoint or Keynote to create your presentation slides.
-
-## Getting Started
-
-Please start by reviewing this document. If you have any questions, please ask your instructor ASAP.
-
-We recommend you check out [the Phase 1 Project Templates and Examples repo](https://github.com/learn-co-curriculum/dsc-project-template) and use the MVP template for your project.
-
-Alternatively, you can fork [the Phase 1 Project Repository][], clone it locally, and work in the `student.ipynb` file. Make sure to also add and commit a PDF of your presentation to your repository with a file name of `presentation.pdf`.
-
-## Project Submission and Review
-
-Review [the Phase Project Submission and Review guidance][] to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
-
-## Summary
-
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
-
-## Tips
-
-Ask for help from your peers or instructors early and often.
-
-[A template for you to use, with an example for reference]: https://github.com/learn-co-curriculum/dsc-project-template
-[Google Chrome Save to PDF instructions]: https://www.wikihow.com/Save-a-Web-Page-as-a-PDF-in-Google-Chrome
-[the Phase 1 Project Repository]: https://github.com/learn-co-curriculum/dsc-phase-1-project-campus
-[the Phase Project Submission and Review guidance]: https://github.com/learn-co-curriculum/dsc-project-submissions-campus
+## Repo structure
