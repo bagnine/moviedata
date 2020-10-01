@@ -61,13 +61,13 @@ Movies tend to bring in the most profit in January, April, July and October, wit
 
 Of the top occuring genres that we tested, Horror, Thrillers and Romance movies generated the highest average profits.
 
-Production Budget is a weak predictor, but by narrowing our budget window we found it was possible to generate a higher likelihood of profit. Our optimized budget window is 12 to 425 million USD.
+Production Budget is a weak predictor, but by narrowing our budget window we found it was possible to generate a higher likelihood of profit. Our optimized budget window is 12 to 200 million USD.
 
 We found no correlation between ratings and profit. We believe ratings can improve the distribution of titles and that when ratings are high, re-watching is more likely, which could have a positive effect on revenue should Microsoft opt to start a streaming service with its movie studio, similar to Disney Plus. It's also possible that highly acclaimed titles could draw subscribers to such a service, though because the subscriptions don't indicate individual use, this is much harder to guage. 
 
 ## Recommendation
 
-Based on our conclusions, we recommend Microsoft develop a studio focused on releasing exciting movies in the Horror and Thriller genres on a quarterly basis, focusing especially on April and July releases. To optimize the chances of a good return, the budget for these movies should fall between 12 and 425 million dollars. While we believe creating a quality film and achieving high critical ratings is important, it doesn't seem to effect the bottom line and is therefore a lower priority than following our other recommendations.
+Based on our conclusions, we recommend Microsoft develop a studio focused on releasing exciting movies in the Horror and Thriller genres on a quarterly basis, focusing especially on April and July releases. To optimize the chances of a good return, the budget for these movies should fall between 12 and 200 million dollars. While we believe creating a quality film and achieving high critical ratings is important, it doesn't seem to effect the bottom line and is therefore a lower priority than following our other recommendations.
 
 ## Further Questions
 
