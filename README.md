@@ -79,7 +79,7 @@ These further questions would better inform the longterm benefits of producing h
 
 * [Our Notebook](https://github.com/bagnine/moviedata/blob/master/Code/moviedata.ipynb)
 * [Data cleaning functions](https://github.com/bagnine/moviedata/blob/master/Code/func.py)
-* Presentation Slides (link)
+* [Presentation Slides](https://github.com/bagnine/moviedata/blob/master/DS_Project_Presentation.pdf)
 
 ## Repository structure
 
