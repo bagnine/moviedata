@@ -10,14 +10,6 @@ For this project, we've been prompted to gather and analyze data about the movie
 
 Microsoft has decided to join other tech giants like Apple and Amazon by creating its own movie studio. Because it will be creating a new brand, Microsoft wants to produce market research to describe the making of a successful movie and translate that into a series of guidelines for reproducing that success.
 
-## Data
-
-For this project we were provided 4 datasets and we created a 5th using the internet-
-* Box Office Mojo- This set includes both foreign and domestic gross sales but lacks any budget info. We largely passed over this set.
-* IMDb- This massive database includes release information, titles, ratings and a wide variety of data about cast, crew and director. 
-* Rotten Tomatoes- This set includes information about ratings, genre, and some box office numbers. Because it's notably lacking in titles, we were only able to gather correlary data and not join with the other databases.
-* The Numbers- This set includes budgets plus foreign and domestic gross for a large number of movies. Because our company is motivated by profit, this set proved instrumental in calculating investment returns.
-* Rotten Tomatoes (web scraped)- Because the provided RT data lacked titles and the ratings weren't normalized, we decided to pull the 'Freshness' percentage ratings directly from the website.
 
 ## Our Hypotheses
 
@@ -73,6 +65,10 @@ Production Budget is a weak predictor, but by narrowing our budget window we fou
 
 We found no correlation between ratings and profit. We believe ratings can improve the distribution of titles and that when ratings are high, re-watching is more likely, which could have a positive effect on revenue should Microsoft opt to start a streaming service with its movie studio, similar to Disney Plus. It's also possible that highly acclaimed titles could draw subscribers to such a service, though because the subscriptions don't indicate individual use, this is much harder to guage. 
 
+## Recommendation
+
+Based on our conclusions, we recommend Microsoft develop a studio focused on releasing exciting movies in the Horror and Thriller genres on a quarterly basis, focusing especially on April and July releases. To optimize the chances of a good return, the budget for these movies should fall between 12 and 425 million dollars. While we believe creating a quality film and achieving high critical ratings is important, it doesn't seem to effect the bottom line and is therefore a lower priority than following our other recommendations.
+
 ## Further Questions
 
 Does a roster of highly acclaimed movies effect subscription rates to streaming services? Do streams improve a film's gross, or does the streaming service pay a flat licensing fee regardless of number of streams?
@@ -81,9 +77,9 @@ These further questions would better inform the longterm benefits of producing h
 
 ## Links to notebook and presentation slides
 
-[Our Notebook](https://github.com/bagnine/moviedata/blob/master/Code/moviedata.ipynb)
-[Data cleaning functions](https://github.com/bagnine/moviedata/blob/master/Code/func.py)
-Presentation Slides (link)
+* [Our Notebook](https://github.com/bagnine/moviedata/blob/master/Code/moviedata.ipynb)
+* [Data cleaning functions](https://github.com/bagnine/moviedata/blob/master/Code/func.py)
+* Presentation Slides (link)
 
 ## Repository structure
 
@@ -92,7 +88,8 @@ Presentation Slides (link)
 ├── DS_Project_Presentation.pdf         <- PDF version of project presentation
 ├── code
 │   ├── moviedata.ipynb                 <- Our notebook
-│   ├── func.py                         <- .py functions for data cleaning
+│   ├── data_func.py                    <- .py functions for data cleaning
+|   ├── scrape.py                       <- .py functions for web scraping
 ├── data                                <- Both provided and web scraped
 └── images                              <- Visualizations used in README
 ```
