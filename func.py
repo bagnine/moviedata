@@ -1,12 +1,9 @@
 import pandas as pd 
-import numpy as np 
-import matplotlib.pyplot as plt 
 import re
 import requests
-import sys
 import time
+import numpy as np
 from bs4 import BeautifulSoup
-
 
 def money_to_int(column):
     a = column.astype(str)
@@ -81,14 +78,12 @@ def find_genre_profits(df, list_of_genres):
         gendict.update({i : find_genre_profit(df, i)})
     return gendict 
 
-def remove_outliers(df):
-    maindf_1 = pd.DataFrame(df)
-    maindf_1['production_budget'] = maindf_1['production_budget'].sort_values()[150:2500]
-    maindf_1.dropna(subset= ['production_budget'], inplace = True)
-    return maindf_1
+def find_genre_rating(df, genre):
+    df1 = df[df[genre]!=0]
+    return df1['rating'].mean()
 
-def central_values(df):
-    maindf_2 = pd.DataFrame(df)
-    maindf_2['production_budget'] = maindf_2['production_budget'].sort_values()[600:2100]
-    maindf_2.dropna(subset = ['production_budget'], inplace = True)
-    return maindf_2
+def find_genre_ratings(df, list_of_genres):
+    gendict = {}
+    for i in list_of_genres:
+        gendict.update({i : find_genre_rating(df, i)})
+    return gendict 
